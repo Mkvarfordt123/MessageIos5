@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Messages Table View Controller-->
         <scene sceneID="Rbb-Cb-Zli">
             <objects>
-                <tableViewController id="Trx-LL-vgO" sceneMemberID="viewController">
+                <tableViewController id="Trx-LL-vgO" customClass="MessagesTableViewController" customModule="MessagesIOS5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="c0b-SI-qHH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="100" id="iI5-ip-3De">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="100" id="iI5-ip-3De" customClass="MessageTableViewCell" customModule="MessagesIOS5" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iI5-ip-3De" id="v39-3S-Xue">
@@ -43,6 +43,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="moon.stars.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="messageButtonTapped:" destination="iI5-ip-3De" eventType="touchUpInside" id="cq5-Jy-2xb"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -58,6 +61,11 @@
                                         <constraint firstItem="O9W-YU-14y" firstAttribute="leading" secondItem="v39-3S-Xue" secondAttribute="leadingMargin" constant="4" id="w6r-BY-5Tg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageButton" destination="XFx-Rf-8QO" id="VF5-ub-vzD"/>
+                                    <outlet property="messageSubtitleLabel" destination="SQa-hK-WGh" id="QhM-gK-5TQ"/>
+                                    <outlet property="messageTextLabel" destination="O9W-YU-14y" id="oMz-Za-Bl7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

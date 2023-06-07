@@ -14,6 +14,9 @@
 		14F0C8542A30D36C00B075F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F0C8522A30D36C00B075F3 /* LaunchScreen.storyboard */; };
 		14F0C8602A30DA9800B075F3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C85F2A30DA9800B075F3 /* Message.swift */; };
 		14F0C8622A30DD9100B075F3 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8612A30DD9100B075F3 /* MessageController.swift */; };
+		14F0C8662A30E5CB00B075F3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8652A30E5CB00B075F3 /* MessageTableViewCell.swift */; };
+		14F0C8682A30E60200B075F3 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8672A30E60200B075F3 /* MessagesTableViewController.swift */; };
+		14F0C86A2A30E8F800B075F3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8692A30E8F800B075F3 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		14F0C8552A30D36C00B075F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F0C85F2A30DA9800B075F3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		14F0C8612A30DD9100B075F3 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		14F0C8652A30E5CB00B075F3 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		14F0C8672A30E60200B075F3 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		14F0C8692A30E8F800B075F3 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,6 @@
 				14F0C85D2A30D9F800B075F3 /* Controllers */,
 				14F0C85C2A30D9EB00B075F3 /* Storyboard */,
 				14F0C85B2A30D9E100B075F3 /* SupportFiles */,
-				14F0C8472A30D36A00B075F3 /* AppDelegate.swift */,
-				14F0C8492A30D36A00B075F3 /* SceneDelegate.swift */,
-				14F0C8502A30D36C00B075F3 /* Assets.xcassets */,
-				14F0C8552A30D36C00B075F3 /* Info.plist */,
 			);
 			path = MessagesIOS5;
 			sourceTree = "<group>";
@@ -73,6 +75,11 @@
 		14F0C85B2A30D9E100B075F3 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				14F0C8552A30D36C00B075F3 /* Info.plist */,
+				14F0C8502A30D36C00B075F3 /* Assets.xcassets */,
+				14F0C8492A30D36A00B075F3 /* SceneDelegate.swift */,
+				14F0C8472A30D36A00B075F3 /* AppDelegate.swift */,
+				14F0C8692A30E8F800B075F3 /* DateFormatter.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -89,6 +96,8 @@
 		14F0C85D2A30D9F800B075F3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				14F0C8642A30E59A00B075F3 /* ViewControllers */,
+				14F0C8632A30E58D00B075F3 /* ModelControllers */,
 				14F0C8612A30DD9100B075F3 /* MessageController.swift */,
 			);
 			path = Controllers;
@@ -100,6 +109,22 @@
 				14F0C85F2A30DA9800B075F3 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		14F0C8632A30E58D00B075F3 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		14F0C8642A30E59A00B075F3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				14F0C8652A30E5CB00B075F3 /* MessageTableViewCell.swift */,
+				14F0C8672A30E60200B075F3 /* MessagesTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F0C8602A30DA9800B075F3 /* Message.swift in Sources */,
+				14F0C8682A30E60200B075F3 /* MessagesTableViewController.swift in Sources */,
 				14F0C8482A30D36A00B075F3 /* AppDelegate.swift in Sources */,
+				14F0C86A2A30E8F800B075F3 /* DateFormatter.swift in Sources */,
 				14F0C84A2A30D36A00B075F3 /* SceneDelegate.swift in Sources */,
+				14F0C8662A30E5CB00B075F3 /* MessageTableViewCell.swift in Sources */,
 				14F0C8622A30DD9100B075F3 /* MessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

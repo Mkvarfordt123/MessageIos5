@@ -10,7 +10,7 @@ import Foundation
 class MessageController {
     // MARK: - Properties
     static let shared = MessageController()
-    private var messages: [Message] = []
+    private(set) var messages: [Message] = []
     
     // MARK: - Functions
     func createMessage(text: String) {
