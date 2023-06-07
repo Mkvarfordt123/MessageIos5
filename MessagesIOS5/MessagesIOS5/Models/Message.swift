@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Message {
+class Message: Codable {
     let text: String
     var isRead: Bool
     let timeStamp: Date
