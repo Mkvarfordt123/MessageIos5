@@ -12,6 +12,10 @@ class MessageController {
     static let shared = MessageController()
     private(set) var messages: [Message] = []
     
+    init() {
+        load()
+    }
+    
     // MARK: - Functions
     func createMessage(text: String) {
         let message = Message(text: text)

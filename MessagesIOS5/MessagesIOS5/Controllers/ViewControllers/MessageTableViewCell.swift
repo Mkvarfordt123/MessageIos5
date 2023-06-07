@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MessageTableViewCellDelegate: AnyObject {
+    func messageButtonTapped(cell: MessageTableViewCell)
+}
+
 class MessageTableViewCell: UITableViewCell {
 // MARK: - Outlets
     @IBOutlet weak var messageTextLabel: UILabel!
@@ -14,7 +18,7 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var messageButton: UIButton!
     
     // MARK: - Properties
-    
+    weak var delegate: MessageTableViewCellDelegate?
     
     // MARK: - Functions
     
@@ -27,6 +31,6 @@ class MessageTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     @IBAction func messageButtonTapped(_ sender: Any) {
-        
+        delegate?.messageButtonTapped(cell: self)
     }
 }
